@@ -15,6 +15,10 @@ INSS = float(input('Quanto em por cento vai para o INSS? R$: '))
 FGTS = float(input('Quanto em por cento vai para o FGTS? R$: '))
 IR = float(input('Quanto em por cento vai para o IR? R$: '))
 VR = float(input('Quanto voce ganha de VR? R$: '))
+
+# os cálculos das porcentagens podem ser feitas uma vez e salvas em variáveis, evitar repetições
+# usar o padrão snake_case
+
 brutoferias = bruto + (bruto * 0.3)
 brutodezembro = bruto + (bruto * 0.9)
 liquido = bruto - (bruto * ((INSS / 100) + (FGTS / 100) + (IR / 100))) + VR

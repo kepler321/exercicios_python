@@ -18,15 +18,18 @@ Total >=9 "Excelente média"""
 
 def total(disciplina, totalsubtotal):
     if totalsubtotal < 5:
-       print('Na disciplina {} voce Reprovou'.format(disciplina))
+        print('Na disciplina {} voce Reprovou'.format(disciplina))
     if totalsubtotal >= 5 and totalsubtotal < 7:
-       print('Na disciplina {} voce esta na média'.format(disciplina))
+        print('Na disciplina {} voce esta na média'.format(disciplina))
     if totalsubtotal >= 7 and totalsubtotal < 9:
         print('Na disciplina {} voce esta acima da media!'.format(disciplina))
     if totalsubtotal >= 9:
         print('Na disciplina {} voce tem uma excelente média'.format(disciplina))
 
 
+# mode mudar a clausula if, para não precisar do else
+# não foi necessário os exit()
+# no if e else deve-se tomar cuidado para ficar encadeado
 
 disciplina = str(input('Digite o nome da disciplina: '))
 if disciplina == '':
@@ -36,20 +39,19 @@ else:
     nota2 = float(input('Segunda nota: '))
     nota3 = float(input('Terceira nota: '))
     subtotal1 = ((nota1 + nota2 + nota3) / 3) * 0.40
-if subtotal1 < 2.00:
-    print('Deu muito ruin!')
-    exit()
-else:
-    nota4 = float(input('Quarta nota: '))
-    nota5 = float(input('Quinta nota: '))
-    nota6 = float(input('Sexta nota: '))
-    subtotal2 = ((nota4 + nota5 + nota6) / 3) * 0.60
-if subtotal2 < 3.00:
-    print('Deu ruin!')
-    exit()
-else:
-    totalsubtotal = subtotal1 + subtotal2
-    total(disciplina, totalsubtotal)
 
+    if subtotal1 < 2.00:
+        print('Deu muito ruin!')
+        exit()
+    else:
+        nota4 = float(input('Quarta nota: '))
+        nota5 = float(input('Quinta nota: '))
+        nota6 = float(input('Sexta nota: '))  # não precisa desta
+        subtotal2 = ((nota4 + nota5 + nota6) / 3) * 0.60  # divisão por 2
 
-
+        if subtotal2 < 3.00:
+            print('Deu ruin!')
+            exit()
+        else:
+            totalsubtotal = subtotal1 + subtotal2
+            total(disciplina, totalsubtotal)

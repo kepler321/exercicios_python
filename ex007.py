@@ -12,6 +12,10 @@ comicaovelho = float(input('Qual é a porcentagem da comicao para carros velhos?
 vendanovo = int(input('Quantos carros novos o funcionario vendeu?: '))
 vendavelho = int(input('Quantos carros velhos o funcionario vendeu?: '))
 
+# perguntar o valor da venda de um carro novo e de um velho
+# calcular a comissão com base nos valores informados e quantidade vendido
+# usar o padrão snake_case em nome de variáveis
+
 if vendanovo == 0 and vendavelho == 0:
     print(salario)
 else:

@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 '''Exercício 1:
 Um programa que solicite 3 números ao usuário e exiba a média aritimética entre eles
 -------------------------------'''
